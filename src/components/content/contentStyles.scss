@@ -159,7 +159,8 @@
   }
 
   &__more-info {
-
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
     &-list {
       padding-left: 20px;
       list-style-type: none;

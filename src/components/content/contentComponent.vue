@@ -25,18 +25,11 @@
         </div>
         <div class="product-detail__sizes">
           <span>Розмір:</span>
-          <button class="product-detail__size">XS</button>
-          <button class="product-detail__size">S</button>
-          <button class="product-detail__size">M</button>
-          <button class="product-detail__size">L</button>
-          <button class="product-detail__size">XL</button>
+          <button v-for="size in sizes" class="product-detail__size">{{ size }}</button>
         </div>
         <div class="product-detail__colors">
           <span>Колір:</span>
-          <button class="product-detail__color">Чорний</button>
-          <button class="product-detail__color">Білий</button>
-          <button class="product-detail__color">Сірий</button>
-          <button class="product-detail__color">Сірий</button>
+          <button v-for="color in colors" class="product-detail__color">{{ color }}</button>
         </div>
         <button class="product-detail__add-to-cart">
           Додати у кошик
@@ -51,17 +44,12 @@
 
       <div v-if="isDetailsOpen" class="product-detail__more-info">
         <ul class="product-detail__more-info-list">
-          <li class="product-detail__more-info-item">65% Бавовна, 35% віскоза</li>
-          <li class="product-detail__more-info-item">Кожна сорочка унікальна</li>
-          <li class="product-detail__more-info-item">Зроблено в Україні</li>
+          <li v-for="info in infoList" class="product-detail__more-info-item">{{ info }}</li>
         </ul>
       </div>
     </div>
     <div class="product-detail__image">
-      <img src="/src/assets/mainPageImgs/vest-main-page-img.svg" alt="Vest img"/>
-      <img src="/src/assets/mainPageImgs/vest-main-page-img.svg" alt="Vest img"/>
-      <img src="/src/assets/mainPageImgs/vest-main-page-img.svg" alt="Vest img"/>
-      <img src="/src/assets/mainPageImgs/vest-main-page-img.svg" alt="Vest img"/>
+      <img v-for="picture in picturesList" :src="picture" alt="Vest img"/>
     </div>
   </div>
   <div class="recommendation-block">
@@ -112,6 +100,30 @@ export default defineComponent({
   data() {
     return {
       isDetailsOpen: false,
+      sizes:[
+        'XS',
+        'S',
+        'M',
+        'L',
+        'XL',
+      ],
+      colors:[
+        'Чорний',
+        'Білий',
+        'Сірий',
+        'Сірий'
+      ],
+      infoList:[
+        '65% Бавовна, 35% віскоза',
+        'Кожна сорочка унікальна',
+        'Зроблено в Україні'
+      ],
+      picturesList:[
+        '/src/assets/mainPageImgs/vest-main-page-img.svg',
+        '/src/assets/mainPageImgs/vest-main-page-img.svg',
+        '/src/assets/mainPageImgs/vest-main-page-img.svg',
+        '/src/assets/mainPageImgs/vest-main-page-img.svg',
+      ],
     };
   },
   methods: {

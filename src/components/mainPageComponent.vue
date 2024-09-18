@@ -15,7 +15,7 @@
 import headerComponent from './header/headerComponent.vue';
 import contentComponent from './content/contentComponent.vue';
 import footerComponent from "./footer/footerComponent.vue";
-import Loader from './loader/loader.vue';
+import Loader from './ui-helpers/loader/loader.vue';
 
 export default {
   name: 'mainPageComponent',
