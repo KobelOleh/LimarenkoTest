@@ -1,0 +1,185 @@
+body,
+html {
+	overflow: hidden !important;
+	margin: 0;
+	padding: 0;
+}
+.v-application--wrap {
+	min-height: unset !important;
+	max-height: 100%;
+}
+div {
+	scroll-behavior: smooth;
+}
+.min {
+	&-100-vh {
+		min-height: 100vh;
+	}
+}
+
+.h {
+	&-100 {
+		height: 100%;
+	}
+	&-auto {
+		height: auto !important;
+	}
+}
+
+.w {
+	&-80 {
+		width: 80%;
+	}
+	&-50 {
+		width: 50%;
+	}
+	&-100 {
+		width: 100% !important;
+	}
+}
+
+.cursor {
+	&-pointer {
+		cursor: pointer;
+	}
+	&-grab {
+		cursor: grab;
+	}
+}
+
+.pointer-events {
+	&-auto {
+		pointer-events: auto !important;
+	}
+}
+.inputNumber-off,
+.inputNumber-off input {
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	&[type="number"] {
+		-moz-appearance: textfield;
+	}
+}
+
+.user-select-none {
+	user-select: none;
+}
+
+.text {
+	&-default-gray {
+		color: #676767;
+	}
+	&-red {
+		color: red;
+	}
+	&-error {
+		color: var(--v-error-base);
+	}
+	&-light-green {
+		color: var(--v-green_light-base);
+	}
+	&-green {
+		color: var(--v-green-base);
+	}
+	&-transform-none {
+		text-transform: none !important;
+	}
+	&-white {
+		color: white !important;
+	}
+	&-black {
+		color: black !important;
+	}
+	&-center {
+		text-align: center;
+	}
+}
+
+.bg {
+	&-white {
+		background: white;
+	}
+}
+
+.border {
+	&-1 {
+		&-lightgray {
+			border: 1px solid lightgray;
+		}
+	}
+}
+
+.success-bg {
+	background: linear-gradient(93.49deg, #4fae3b -60.48%, #0e7e02 109.27%);
+}
+.error-bg {
+	background: #f4511e !important;
+}
+
+.v-btn--disabled {
+	&.success-bg {
+		background: rgba(0, 0, 0, 0.12) !important;
+	}
+	.success-bg {
+		background: rgba(0, 0, 0, 0.12) !important;
+	}
+}
+
+.br {
+	&-trsm {
+		border-top-right-radius: 3px;
+	}
+	&-tlsm {
+		border-top-left-radius: 3px;
+	}
+	&-0 {
+		border-radius: 0px !important;
+	}
+	&-10 {
+		border-radius: 10px !important;
+	}
+	&-20 {
+		border-radius: 20px !important;
+	}
+	&-14 {
+		border-radius: 14px !important;
+	}
+}
+.font {
+	&-20 {
+		font-size: 20px;
+	}
+	&-14 {
+		font-size: 14px;
+	}
+	&-16 {
+		font-size: 16px;
+	}
+}
+
+.position {
+	&-relative {
+		position: relative;
+	}
+	&-absolute {
+		position: absolute;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 8px;
+	background-color: unset;
+}
+::-webkit-scrollbar-thumb {
+
+	background-color: rgb(113, 113, 113);
+	// border: 2px solid rgb(245, 245, 244);
+	border-radius: 9em;
+}
+::-webkit-scrollbar-thumb:hover {
+	// background-color: darken(rgb(113, 113, 113), 4);
+}
